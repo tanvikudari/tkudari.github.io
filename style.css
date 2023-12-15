@@ -1,0 +1,101 @@
+#title{
+  background-color:#163020;
+  padding:20px; 
+  position: relative;
+  overflow: hidden;
+}
+#title::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(to right, #163020, #304D30);
+  animation: moveBackground 10s linear infinite;
+}
+@keyframes moveBackground {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+@keyframes wiggle {
+  0% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+  100% { transform: rotate(-5deg); }
+}
+h1{
+  font-family: 'Lora', serif;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  color:#FCC101;
+  text-align:center;
+  animation: wiggle 3s ease-in-out;
+}
+nav{
+  background-color: #163020;
+  padding: 0;
+  font-family: 'Lora', serif;
+  font-weight: bold;
+  width: 100%;
+  display: inline-block;
+}
+.navbar-item{
+  color:#EEF0E5 !important;
+  font-size: 22px;
+  font-family: 'Lora', serif;
+}
+.navbar-item:hover {
+  text-decoration: underline;
+}
+
+body{
+  cursor: url('images/skateicon.png') 10 10, auto;
+}
+#body-container{
+  background-color:#304D30;
+}
+#body-container img {
+  width: 100%;
+  height: auto;
+}
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+.image-container img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s;
+}
+.image-container:hover img {
+  transform: scale(1.1); /* Adjust the scale factor as needed */
+}
+.clickable-image {
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+#about{
+  background-color: #B6C4B6 ;
+  font-family: 'Lora', serif;
+}
+.icon-space {
+  display: inline-block;
+  width: 5px; /* Adjust the width for the desired space */
+}
+#footer{
+  background-color: #EEF0E5;
+  padding:2px;
+  text-align: center;
+  font-family: 'Lora', serif;
+  font-size: small;
+}
+@media (min-width: 992px) {
+  /* Larger screens, adjust the image size as needed */
+  .custom-image {
+    max-width: 100%; /* Adjust the percentage based on your preference */
+  }
+}
